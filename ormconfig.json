@@ -1,6 +1,23 @@
 {
-    "cli": {
-        "migrationsDir": "src/migration",
-        "entitiesDir":"src/models"
-    }
-}
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "S14151612139",
+    "database": "Auth_Users",
+    "synchronize": false,
+    "logging": true,
+    "entities": [
+       "src/models/*.ts"
+    ],
+    "migrations": [
+       "src/migrations/*.ts"
+    ],
+    "ssl": false,
+    "extra": {
+        "validateConnection": false,
+        "trustServerCertificate": true
+    },
+    "cli": { "migrationsDir": "src/migrations" }
+    
+ }

@@ -1,14 +1,21 @@
-import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm'
+import {BaseEntity, Column, Entity, PrimaryGeneratedColumn} from 'typeorm'
+import 'reflect-metadata'
 
-@Entity()
+@Entity('Products')
 export class Product {
 
     @PrimaryGeneratedColumn()
     id: string
 
-    @Column()
+    @Column({nullable: true })
+    name: string
+
+    @Column({nullable: true })
     category: string
 
-    @Column()
+    @Column({nullable: true })
     price: Number
+
+    @Column({nullable: true })
+    imgUrl: string
 } 
