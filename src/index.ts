@@ -1,4 +1,7 @@
 import app from './app'
+import connectionDB from './database'
+import '../src/database'
+
 
 
 app.listen(3000, ()=>{
