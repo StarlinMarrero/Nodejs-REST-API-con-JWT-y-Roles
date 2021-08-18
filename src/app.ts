@@ -6,7 +6,7 @@ const app = express();
 
 
 
-
+app.use(express.json());
 app.use('/products', RoutesProducts);
 app.use('/Account', RoutesAccount);
 
