@@ -3,9 +3,10 @@ import { getRepository } from 'typeorm';
 import { Product } from '../models/Product';
 
 
-export const list: RequestHandler = (req, res) => {
+export const list: RequestHandler = async (req, res) => {
 
-    res.json('lista de productos');
+    const lista = await getRepository(Product).find();
+    res.json({lista});
 
 
 }
@@ -16,5 +17,4 @@ export const create: RequestHandler = async (req, res) => {
     const result = await getRepository(Product).save(newProduct);
 
     res.json(result);
-
 }
